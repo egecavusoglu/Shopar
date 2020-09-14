@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         print("PRICE", originalPrice.text! )
         print("DISCOUNT", discount.text! )
         print("TAX", tax.text! )
-        var oPrice =
+//        var oPrice =
     }
     
 }
