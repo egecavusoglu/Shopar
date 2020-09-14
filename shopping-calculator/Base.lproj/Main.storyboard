@@ -35,7 +35,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="handlePrice:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="FKL-FR-1sC"/>
+                                    <action selector="handlePrice:" destination="BYZ-38-t0r" eventType="editingChanged" id="dpO-f9-ehI"/>
                                     <action selector="startedChanging:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="Zk8-XD-UlG"/>
                                 </connections>
                             </textField>
@@ -52,7 +52,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="handlePrice:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="mHM-xU-eyu"/>
+                                    <action selector="handlePrice:" destination="BYZ-38-t0r" eventType="editingChanged" id="LJk-wT-DPn"/>
                                     <action selector="startedChanging:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="LD1-7z-5KF"/>
                                 </connections>
                             </textField>
@@ -63,8 +63,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sales Tax %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHW-C7-9ia">
-                                <rect key="frame" x="30" y="376" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sales Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHW-C7-9ia">
+                                <rect key="frame" x="30" y="376" width="74" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -76,7 +76,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done"/>
                                 <connections>
-                                    <action selector="handlePrice:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="JKg-IP-Msi"/>
+                                    <action selector="handlePrice:" destination="BYZ-38-t0r" eventType="editingChanged" id="pn5-sY-kX8"/>
                                     <action selector="startedChanging:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="M7x-YI-fMc"/>
                                 </connections>
                             </textField>
