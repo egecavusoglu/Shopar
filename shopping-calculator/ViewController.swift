@@ -14,22 +14,59 @@ class ViewController: UIViewController {
     @IBOutlet weak var discount: UITextField!
     @IBOutlet weak var tax: UITextField!
     @IBOutlet weak var finalPrice: UILabel!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+       let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+       view.addGestureRecognizer(tapGesture)
+        finalPrice.alpha = 0
+        loader.alpha = 0
     }
     
     @IBAction func startedChanging(_ sender: Any) {
-        print("STARTED PRINTING")
+//        print("STARTED PRINTING")
+        handleVisibility(type: "load")
+
     }
     
     @IBAction func handlePrice(_ sender: Any) {
-        print("PRICE", originalPrice.text! )
-        print("DISCOUNT", discount.text! )
-        print("TAX", tax.text! )
-//        var oPrice =
+        
+    if let o = Double(originalPrice.text!), let d = Double(discount.text!), let t = Double(tax.text!) {
+            print("NUMBERS", o, d, t)
+            let fin = calculateFinal(o: o, d: d, t: t);
+            print("FIN", fin)
+            finalPrice.text = fin
+            handleVisibility(type: "")
+        }
+        else {
+            print("WRONG INPUTS")
+            finalPrice.text = "N/A"
+        }
+        
+
+    }
+    
+    func calculateFinal (o: Double, d: Double, t: Double) -> String {
+        return String(format: "%.2f", o * (1.0 - (d/100)) * (1 + (t / 100)))
+    }
+    
+    func handleVisibility (type: String) {
+        print("WORKING")
+        if (type == "load"){
+            print("LOADING")
+            finalPrice.alpha = 0
+            loader.alpha = 1
+            loader.startAnimating()
+        }
+        else {
+            print("SETTING")
+            self.finalPrice.alpha = 1
+            loader.alpha = 0
+            loader.stopAnimating()
+        }
     }
     
 }
