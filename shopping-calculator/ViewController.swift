@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tax: UITextField!
     @IBOutlet weak var finalPrice: UILabel!
     @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var dollarSign: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,24 @@ class ViewController: UIViewController {
        view.addGestureRecognizer(tapGesture)
         finalPrice.alpha = 0
         loader.alpha = 0
+        dollarSign.alpha = 0
+        setBorders(myTextField: originalPrice)
+        setBorders(myTextField: discount)
+        setBorders(myTextField: tax)
+        
+    }
+    
+    // Got bottom border styling code from https://stackoverflow.com/a/31108018
+    func setBorders (myTextField: UITextField) {
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0.0, y: myTextField.frame.height - 1, width: myTextField.frame.width, height: 1.0)
+        bottomLine.backgroundColor = UIColor.white.cgColor
+        myTextField.borderStyle = UITextField.BorderStyle.none
+        myTextField.layer.addSublayer(bottomLine)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     @IBAction func startedChanging(_ sender: Any) {
@@ -44,6 +63,8 @@ class ViewController: UIViewController {
         else {
             print("WRONG INPUTS")
             finalPrice.text = "N/A"
+            handleVisibility(type: "")
+
         }
         
 
@@ -58,12 +79,14 @@ class ViewController: UIViewController {
         if (type == "load"){
             print("LOADING")
             finalPrice.alpha = 0
+            dollarSign.alpha = 0
             loader.alpha = 1
             loader.startAnimating()
         }
         else {
             print("SETTING")
-            self.finalPrice.alpha = 1
+            finalPrice.alpha = 1
+            dollarSign.alpha = 1
             loader.alpha = 0
             loader.stopAnimating()
         }
