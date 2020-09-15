@@ -1,9 +1,24 @@
 
+/* Class = "UIButton"; normalTitle = "Add to Cart"; ObjectID = "18A-MO-kD4"; */
+"18A-MO-kD4.normalTitle" = "Sepete Ekle";
+
 /* Class = "UILabel"; text = "Shopar"; ObjectID = "7ty-Th-L44"; */
 "7ty-Th-L44.text" = "Shopar";
 
+/* Class = "UIButton"; normalTitle = "Reset Cart"; ObjectID = "8qe-bz-dzY"; */
+"8qe-bz-dzY.normalTitle" = "Sepeti Temizle";
+
+/* Class = "UILabel"; text = "0.0"; ObjectID = "GCn-CB-mjL"; */
+"GCn-CB-mjL.text" = "0.0";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "ISO-DA-guL"; */
+"ISO-DA-guL.text" = "Toplam";
+
 /* Class = "UILabel"; text = "Simple shopping calculator"; ObjectID = "LFc-MP-V99"; */
-"LFc-MP-V99.text" = "Alışverişiniz için hesap makinesi";
+"LFc-MP-V99.text" = "Basit hesap makineniz";
+
+/* Class = "UILabel"; text = "$"; ObjectID = "NbX-qh-24O"; */
+"NbX-qh-24O.text" = "$";
 
 /* Class = "UILabel"; text = "%"; ObjectID = "VhB-bG-gdc"; */
 "VhB-bG-gdc.text" = "%";
@@ -15,10 +30,10 @@
 "eLv-MA-MXq.text" = "İndirim";
 
 /* Class = "UILabel"; text = "Original Price"; ObjectID = "gI2-8j-dk2"; */
-"gI2-8j-dk2.text" = "İlk Fiyat";
+"gI2-8j-dk2.text" = "İlk fiyat";
 
-/* Class = "UILabel"; text = "Total"; ObjectID = "j6T-Lu-JJ8"; */
-"j6T-Lu-JJ8.text" = "Toplam";
+/* Class = "UILabel"; text = "Subtotal"; ObjectID = "j6T-Lu-JJ8"; */
+"j6T-Lu-JJ8.text" = "Ara Toplam";
 
 /* Class = "UILabel"; text = "%"; ObjectID = "lT8-2h-hQL"; */
 "lT8-2h-hQL.text" = "%";
