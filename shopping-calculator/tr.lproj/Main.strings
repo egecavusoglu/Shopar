@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Shopar"; ObjectID = "7ty-Th-L44"; */
+"7ty-Th-L44.text" = "Shopar";
+
+/* Class = "UILabel"; text = "Simple shopping calculator"; ObjectID = "LFc-MP-V99"; */
+"LFc-MP-V99.text" = "Alışverişiniz için hesap makinesi";
+
+/* Class = "UILabel"; text = "%"; ObjectID = "VhB-bG-gdc"; */
+"VhB-bG-gdc.text" = "%";
+
+/* Class = "UILabel"; text = "$"; ObjectID = "e2K-7V-Hna"; */
+"e2K-7V-Hna.text" = "$";
+
+/* Class = "UILabel"; text = "Discount"; ObjectID = "eLv-MA-MXq"; */
+"eLv-MA-MXq.text" = "İndirim";
+
+/* Class = "UILabel"; text = "Original Price"; ObjectID = "gI2-8j-dk2"; */
+"gI2-8j-dk2.text" = "İlk Fiyat";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "j6T-Lu-JJ8"; */
+"j6T-Lu-JJ8.text" = "Toplam";
+
+/* Class = "UILabel"; text = "%"; ObjectID = "lT8-2h-hQL"; */
+"lT8-2h-hQL.text" = "%";
+
+/* Class = "UILabel"; text = "N/A"; ObjectID = "mPT-R1-66e"; */
+"mPT-R1-66e.text" = "N/A";
+
+/* Class = "UILabel"; text = "Sales Tax"; ObjectID = "pHW-C7-9ia"; */
+"pHW-C7-9ia.text" = "Vergi";

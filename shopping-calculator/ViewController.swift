@@ -16,6 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var finalPrice: UILabel!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var dollarSign: UILabel!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var totalCart: UILabel!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +31,8 @@ class ViewController: UIViewController {
         finalPrice.alpha = 0
         loader.alpha = 0
         dollarSign.alpha = 0
+        addButton.isHidden = true
+
         setBorders(myTextField: originalPrice)
         setBorders(myTextField: discount)
         setBorders(myTextField: tax)
@@ -46,9 +53,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startedChanging(_ sender: Any) {
-//        print("STARTED PRINTING")
         handleVisibility(type: "load")
-
     }
     
     @IBAction func handlePrice(_ sender: Any) {
@@ -58,16 +63,33 @@ class ViewController: UIViewController {
             let fin = calculateFinal(o: o, d: d, t: t);
             print("FIN", fin)
             finalPrice.text = fin
-            handleVisibility(type: "")
+            handleVisibility(type: "correct")
         }
         else {
             print("WRONG INPUTS")
             finalPrice.text = "N/A"
             handleVisibility(type: "")
-
         }
         
 
+    }
+    
+    // Total variable
+    var total = 0.0
+    @IBAction func addToCart(_ sender: Any) {
+        if let  pr = Double(finalPrice.text!) {
+        total += pr
+        totalCart.text = String(format: "%.2f",total)
+            print("SETTING TOTAL ", total)
+        }
+        else{
+            totalCart.text = ""
+        }
+    }
+    
+    @IBAction func resetCart(_ sender: Any) {
+        total = 0.0
+        totalCart.text = String(total)
     }
     
     func calculateFinal (o: Double, d: Double, t: Double) -> String {
@@ -77,14 +99,21 @@ class ViewController: UIViewController {
     func handleVisibility (type: String) {
         print("WORKING")
         if (type == "load"){
-            print("LOADING")
             finalPrice.alpha = 0
             dollarSign.alpha = 0
+            addButton.isHidden = true
             loader.alpha = 1
             loader.startAnimating()
         }
+        else if (type == "correct"){
+            addButton.isHidden = false
+            finalPrice.alpha = 1
+            dollarSign.alpha = 1
+            loader.alpha = 0
+            loader.stopAnimating()
+        }
         else {
-            print("SETTING")
+            addButton.isHidden = true
             finalPrice.alpha = 1
             dollarSign.alpha = 1
             loader.alpha = 0
